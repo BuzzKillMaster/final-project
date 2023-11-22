@@ -22,7 +22,7 @@ Before we start, make sure you have Node.js and Git installed on your computer.
 If you don't, download and install node from the [Node.js official website](https://nodejs.org/en) and Git from the [Git official website](https://git-scm.com/downloads).
 
 
-## Step 1: Clone the Repository
+### Step 1: Clone the Repository
 First, clone the project repository to your local machine using Git. Open your terminal and run:
 
 ```bash
