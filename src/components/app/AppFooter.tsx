@@ -1,3 +1,17 @@
+import FooterNavigation from "@/components/app/navigation/FooterNavigation";
+
 export default function AppFooter() {
-    return (<></>)
+    return (
+        <footer className={"py-12"}>
+            <div className={"container mx-auto max-w-7xl"}>
+                <div className={"flex items-center justify-between"}>
+                    <h2>Company Name ApS</h2>
+
+                    <FooterNavigation />
+                </div>
+
+                <p className={"text-center mt-12"}>Copyright 2023 &copy; Company Name ApS. All rights reserved.</p>
+            </div>
+        </footer>
+    )
 }
