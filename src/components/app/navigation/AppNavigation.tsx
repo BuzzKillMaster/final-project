@@ -1,0 +1,22 @@
+import NavLink from "@/components/app/navigation/NavLink";
+
+const destinations = [
+    "Home",
+    "About",
+    "Services",
+    "Contact",
+    "Blog",
+    "Careers"
+]
+
+export default function AppNavigation() {
+    return (
+        <nav>
+            <ul className={"flex gap-4"}>
+                {destinations.map((destination, index) => (
+                    <NavLink key={index} text={destination}/>
+                ))}
+            </ul>
+        </nav>
+    )
+}
