@@ -2,6 +2,7 @@ import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import ContactForm from "@/components/sections/contact/ContactForm";
 import "leaflet/dist/leaflet.css"
+import LocationMap from "@/components/sections/contact/LocationMap";
 
 export default function ContactSection() {
     return (
@@ -15,6 +16,8 @@ export default function ContactSection() {
 
                 <ContactForm />
             </div>
+
+            <LocationMap />
         </SectionContainer>
     )
 }
