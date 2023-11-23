@@ -9,7 +9,7 @@ const destinations = [
     "Careers"
 ]
 
-export default function AppNavigation() {
+export default function HeaderNavigation() {
     return (
         <nav>
             <ul className={"flex gap-4"}>

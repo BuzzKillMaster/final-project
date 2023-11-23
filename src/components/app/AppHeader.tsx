@@ -1,4 +1,4 @@
-import AppNavigation from "@/components/app/navigation/AppNavigation";
+import HeaderNavigation from "@/components/app/navigation/HeaderNavigation";
 
 export default function AppHeader() {
     return (
@@ -6,7 +6,7 @@ export default function AppHeader() {
             <div className={"container mx-auto max-w-7xl flex items-center justify-between"}>
                 <h1 className={"text-4xl"}>Lorem Ipsum</h1>
 
-                <AppNavigation/>
+                <HeaderNavigation/>
             </div>
         </header>
     )
