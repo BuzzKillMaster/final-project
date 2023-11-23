@@ -21,7 +21,7 @@ export default function FakeDynamicCard({title, description, horizontal = true, 
     }, [imageUri, imageAlt])
 
     return (
-        <article className={"flex gap-4 " + (horizontal ? "" : "flex-col")}>
+        <article className={"flex gap-4 items-start " + (horizontal ? "" : "flex-col")}>
             {imageUri && (
                 <Image src={imageUri} alt={imageAlt!} height={imageHeight} width={imageWidth} />
             )}
