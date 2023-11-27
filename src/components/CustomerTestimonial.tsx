@@ -14,27 +14,28 @@ interface CustomerTestimonialProps {
 
 export default function CustomerTestimonial({imgSource, imgWidth, imgHeight, altText, heading, testimonial, author}: CustomerTestimonialProps) {
     return (
-        <div>
+        <div className='grid grid-cols-5 grid-rows-1'>
 
-            <Image
+            <Image className='col-span-2 col-start-4 row-start-1'
                 src={imgSource}
                 width={imgWidth}
                 height={imgHeight}
                 alt={altText}
             />
 
-            <div>
+            <div className='grid gap-5 col-span-4 col-start-1 row-start-1 h-fit py-9'>
                 <Image
                     src="https://fakeimg.pl/50"
-                    width="50"
-                    height="50"
+                    width={100}
+                    height={100}
+                    // doesnt change the height?
                     alt="Citationstegn"
                 ></Image>
 
-                <div>
-                    <h2>{heading}</h2>
+                <div className='grid gap-4 px-12'>
+                    <h2 className='text-5xl'>{heading}</h2>
                     <p>{testimonial}</p>
-                    <p>{author}</p>
+                    <p className='text-sm'>{author}</p>
                 </div>
             </div>
             
