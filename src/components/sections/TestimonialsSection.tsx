@@ -1,4 +1,10 @@
+import CustomerTestimonial from "../CustomerTestimonial";
+
 // Vicky
 export default function TestimonialsSection() {
-    return (<></>)
+    return (
+        <section>
+            <CustomerTestimonial/>
+        </section>
+    )
 }
