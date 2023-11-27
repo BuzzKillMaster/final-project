@@ -9,7 +9,7 @@ export default function SectionHeader({subheading, heading, description}: Sectio
         <header className={"grid gap-4"}>
             <h3 className={"text-2xl"}>{subheading}</h3>
             <h2 className={"text-5xl"}>{heading}</h2>
-            <p>{description}</p>
+            <p className={"max-w-md"}>{description}</p>
         </header>
     )
 }

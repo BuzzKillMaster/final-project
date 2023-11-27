@@ -3,8 +3,8 @@
 import DynamicCard from "../DynamicCard";
 import SectionHeader from "./partials/SectionHeader";
 
-const fakeCMS = Array(3).fill({
-    heading: "Lorem ipsum dolor sit amet",
+const fakeCMS = Array(6).fill({
+    heading: "Lorem ipsum dolor sit",
     description: "Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta.",
     imgSource: "https://fakeimg.pl/500/",
     altText: "temp",
@@ -12,22 +12,23 @@ const fakeCMS = Array(3).fill({
 
 export default function TrainingSection() {
     return (
-        <section>
+        <section className="px-80 grid gap-12 py-20">
+            {/* Change to sectionContainer */}
 
-            <SectionHeader subheading="test" heading="test 2" description="test 3"/>
+            <SectionHeader subheading="Jeg tilbyder" heading="Adfærdstræning på Fyn" description="Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor.Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor."/>
 
-            <ul>
+            <ul className="grid grid-cols-3 gap-12">
                 {
                     fakeCMS.map( (item) => (
 
                         <DynamicCard 
                             imgSource={item.imgSource}
-                            imgWidth={200}
-                            imgHeight={200}
+                            imgWidth={100}
+                            imgHeight={100}
                             altText={item.altText}
                             heading={item.heading}
                             description={item.description}
-                            flexDirection="flex-row"
+                            flexDirection="flex-col"
                         >
                         
                         </DynamicCard>

@@ -16,11 +16,9 @@ interface DynamicCardProps {
 }
 
 export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, heading, description, children, flexDirection}: DynamicCardProps) {
-    console.log(imgSource)
-    console.log("jeg virker")
 
     return (
-        <header className={'flex ' + flexDirection}>
+        <div className={'flex ' + flexDirection + ' gap-5'}>
             <div>
                 <Image
                     src={imgSource}
@@ -29,11 +27,11 @@ export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, he
                     alt={altText}
                 />
             </div>
-            <div>
-                <h4>{heading}</h4>
+            <div className='grid gap-4'>
+                <h4 className='text-2xl'>{heading}</h4>
                 <p>{description}</p>
                 {children}
             </div>
-        </header>
+        </div>
     )
 }
