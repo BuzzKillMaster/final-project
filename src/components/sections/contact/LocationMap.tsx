@@ -10,7 +10,7 @@ const position: LatLng = new LatLng(55.31920555566235, 10.274566768351592)
 
 export default function LocationMap() {
     return (
-        <MapContainer center={position} zoom={10} scrollWheelZoom={false} className={"h-full w-full"}>
+        <MapContainer center={position} zoom={10} scrollWheelZoom={false} className={"h-full w-full aspect-square md:aspect-auto"}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />

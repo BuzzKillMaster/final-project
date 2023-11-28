@@ -4,7 +4,7 @@ export default function AppFooter() {
     return (
         <footer className={"py-12"}>
             <div className={"container mx-auto max-w-7xl"}>
-                <div className={"flex items-center justify-between"}>
+                <div className={"flex flex-col md:flex-row gap-12 items-center justify-between"}>
                     <h2>Company Name ApS</h2>
 
                     <FooterNavigation />

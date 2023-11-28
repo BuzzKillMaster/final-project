@@ -9,7 +9,7 @@ const destinations = [
 export default function FooterNavigation() {
     return (
         <nav>
-            <ul className={"flex gap-4"}>
+            <ul className={"flex gap-4 flex-col sm:flex-row items-center"}>
                 {destinations.map((destination, index) => (
                     <NavLink key={index} text={destination}/>
                 ))}

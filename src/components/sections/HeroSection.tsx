@@ -7,8 +7,8 @@ import HeroVideo from "@/components/sections/hero/HeroVideo";
 
 export default function HeroSection() {
     return (
-        <SectionContainer containerClassName={"grid grid-cols-2 gap-20 items-center"}>
-            <div>
+        <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
+            <div className={"col-start-1 row-start-1 text-neutral-50 md:text-neutral-950 z-10"}>
                 <SectionHeader
                     subheading={"Lorem ipsum"}
                     heading={"Lorem ipsum dolor sit amet"}
@@ -18,7 +18,9 @@ export default function HeroSection() {
                 <PrimaryButton type={"button"} text={"Click me"} onClick={() => {}} />
             </div>
 
-            <HeroVideo />
+            <div className={"col-start-1 row-start-1 md:col-start-2"}>
+                <HeroVideo />
+            </div>
         </SectionContainer>
     )
 }

@@ -12,7 +12,7 @@ const destinations = [
 export default function HeaderNavigation() {
     return (
         <nav>
-            <ul className={"flex gap-4"}>
+            <ul className={"hidden lg:flex gap-4"}>
                 {destinations.map((destination, index) => (
                     <NavLink key={index} text={destination}/>
                 ))}

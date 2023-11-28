@@ -14,7 +14,7 @@ export default function ApproachSection() {
         <SectionContainer>
             <SectionHeader subheading={"Lorem ipsum"} heading={"Lorem ipsum dolor sit amet"} description={"Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta."} />
 
-            <div className={"grid grid-cols-3 gap-12 mt-20"}>
+            <div className={"grid md:grid-cols-3 gap-12 mt-20"}>
                 {data.map((item, index) => (
                     <FakeDynamicCard
                         key={index}

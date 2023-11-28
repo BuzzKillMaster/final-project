@@ -6,7 +6,7 @@ import LocationMap from "@/components/sections/contact/LocationMap";
 
 export default function ContactSection() {
     return (
-        <SectionContainer containerClassName={"grid grid-cols-2 gap-20 items-center"}>
+        <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
             <div>
                 <SectionHeader
                     subheading={"Lorem ipsum"}
