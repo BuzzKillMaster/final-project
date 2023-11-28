@@ -1,4 +1,5 @@
 import NavLink from "@/components/app/navigation/NavLink";
+import {HiMenuAlt3} from "react-icons/hi";
 
 const destinations = [
     "Home",
@@ -17,6 +18,8 @@ export default function HeaderNavigation() {
                     <NavLink key={index} text={destination}/>
                 ))}
             </ul>
+
+            <HiMenuAlt3 className={"lg:hidden text-2xl cursor-pointer"}/>
         </nav>
     )
 }
