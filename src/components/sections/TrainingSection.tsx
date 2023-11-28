@@ -19,9 +19,10 @@ export default function TrainingSection() {
 
             <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
                 {
-                    fakeCMS.map( (item) => (
+                    fakeCMS.map( (item, index) => (
 
-                        <DynamicCard 
+                        <DynamicCard
+                            key = {index}
                             imgSource={item.imgSource}
                             imgWidth={100}
                             imgHeight={100}
