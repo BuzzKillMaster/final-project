@@ -2,9 +2,17 @@ import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import ContactForm from "@/components/sections/contact/ContactForm";
 import "leaflet/dist/leaflet.css"
-import LocationMap from "@/components/sections/contact/LocationMap";
+import {useMemo} from "react";
+import dynamic from "next/dynamic";
 
 export default function ContactSection() {
+    const MapDisplay = useMemo(() => dynamic(
+        () => import("@/components/sections/contact/LocationMap"),
+        {
+            ssr: false
+        }
+    ), [])
+
     return (
         <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
             <div>
@@ -17,7 +25,7 @@ export default function ContactSection() {
                 <ContactForm />
             </div>
 
-            <LocationMap />
+            <MapDisplay />
         </SectionContainer>
     )
 }
