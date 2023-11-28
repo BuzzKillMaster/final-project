@@ -14,7 +14,7 @@ export default function Home() {
         <>
             <AppHeader/>
 
-            <main>
+            <main className="bg-red-500 sm:bg-orange-500 md:bg-purple-500 lg:bg-green-500 xl:bg-yellow-500 2xl:bg-blue-500">
                 <HeroSection/>
                 <TrainingSection/>
                 <ProfileSection/>

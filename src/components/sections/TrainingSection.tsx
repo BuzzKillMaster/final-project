@@ -12,12 +12,12 @@ const fakeCMS = Array(6).fill({
 
 export default function TrainingSection() {
     return (
-        <section className="px-80 grid gap-12 py-20">
+        <section className="px-4 max-w-7xl mx-auto grid gap-12 py-20">
             {/* Change to sectionContainer */}
 
             <SectionHeader subheading="Jeg tilbyder" heading="Adfærdstræning på Fyn" description="Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor.Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor."/>
 
-            <ul className="grid grid-cols-3 gap-12">
+            <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
                 {
                     fakeCMS.map( (item) => (
 

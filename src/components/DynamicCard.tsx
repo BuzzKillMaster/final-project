@@ -18,7 +18,7 @@ interface DynamicCardProps {
 export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, heading, description, children, flexDirection}: DynamicCardProps) {
 
     return (
-        <div className={'flex ' + flexDirection + ' gap-5'}>
+        <div className={'flex ' + flexDirection + ' gap-3 lg:gap-5'}>
             <div>
                 <Image
                     src={imgSource}
@@ -27,9 +27,9 @@ export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, he
                     alt={altText}
                 />
             </div>
-            <div className='grid gap-4'>
-                <h4 className='text-2xl'>{heading}</h4>
-                <p>{description}</p>
+            <div className='grid gap-2 lg:gap-4'>
+                <h4 className='text-lg lg:text-2xl'>{heading}</h4>
+                <p className='text-sm lg:text-base'>{description}</p>
                 {children}
             </div>
         </div>
