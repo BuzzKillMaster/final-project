@@ -2,6 +2,7 @@
 
 import DynamicCard from "../DynamicCard";
 import SectionHeader from "./partials/SectionHeader";
+import SectionContainer from "@/components/sections/partials/SectionContainer";
 
 const fakeCMS = Array(6).fill({
     heading: "Lorem ipsum dolor sit",
@@ -12,9 +13,7 @@ const fakeCMS = Array(6).fill({
 
 export default function TrainingSection() {
     return (
-        <section className="px-4 max-w-7xl mx-auto grid gap-12 py-20">
-            {/* Change to sectionContainer */}
-
+        <SectionContainer>
             <SectionHeader subheading="Jeg tilbyder" heading="Adfærdstræning på Fyn" description="Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor.Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor."/>
 
             <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
@@ -35,9 +34,7 @@ export default function TrainingSection() {
                         </DynamicCard>
                     ))
                 }
-
             </ul>
-
-        </section>
+        </SectionContainer>
     )
 }

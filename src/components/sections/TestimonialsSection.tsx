@@ -2,6 +2,7 @@
 
 import CustomerTestimonial from "../CustomerTestimonial";
 import {useState, useEffect} from 'react'
+import SectionContainer from "@/components/sections/partials/SectionContainer";
 
 // Vicky
 
@@ -62,8 +63,7 @@ export default function TestimonialsSection() {
     }
   
     return (
-      <section className="px-4 max-w-7xl mx-auto py-20">
-        {/* Change to sectionContainer */}
+      <SectionContainer>
         <CustomerTestimonial
           imgSource={fakeTestimonialCMS[testimonialIndex].imgSource}
           imgWidth={600}
@@ -77,6 +77,6 @@ export default function TestimonialsSection() {
         <div className="testimonial-tabs flex gap-1">
           {renderTestimonials()}
         </div>
-      </section>
+      </SectionContainer>
     )
   }
