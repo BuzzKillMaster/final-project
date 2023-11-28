@@ -28,31 +28,85 @@ const fakeTestimonialCMS = [{
     }
 ]
 
+// export default function TestimonialsSection() {
+
+//     const [testimonialIndex, setTestimonialIndex] = useState(0)
+
+//     useEffect(() => {
+//         const interval = setInterval(() => {
+//             setTestimonialIndex((previousIndex) => previousIndex === fakeTestimonialCMS.length - 1 ? 0 : previousIndex + 1)
+    
+//         }, 10000)
+    
+//         return () => clearInterval(interval)
+//     }, [])
+
+//     return (
+//         <section className="px-80 grid gap-12 py-20">
+//             {/* Change to sectionContainer */}
+//             <CustomerTestimonial
+//                 imgSource={fakeTestimonialCMS[testimonialIndex].imgSource}
+//                 imgWidth={600}
+//                 imgHeight={600}
+//                 altText={fakeTestimonialCMS[testimonialIndex].altText}
+//                 heading={fakeTestimonialCMS[testimonialIndex].heading}
+//                 testimonial={fakeTestimonialCMS[testimonialIndex].testimonial}
+//                 author={fakeTestimonialCMS[testimonialIndex].author}
+//             />
+//         </section>
+//     )
+// }
+
 export default function TestimonialsSection() {
-
-    const [testimonialIndex, setTestimonialIndex] = useState(0)
-
+    const [testimonialIndex, setTestimonialIndex] = useState(0);
+  
     useEffect(() => {
-        const interval = setInterval(() => {
-            setTestimonialIndex((previousIndex) => previousIndex === fakeTestimonialCMS.length - 1 ? 0 : previousIndex + 1)
-    
-        }, 10000)
-    
-        return () => clearInterval(interval)
-    }, [])
-
+      const interval = setInterval(() => {
+        setTestimonialIndex((prevIndex) =>
+          prevIndex === fakeTestimonialCMS.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+  
+      return () => clearInterval(interval);
+    }, [testimonialIndex]);
+  
+    const showTestimonial = (index) => {
+      setTestimonialIndex(index);
+    };
+  
+    const renderTestimonials = () => {
+        return fakeTestimonialCMS.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => showTestimonial(index)}
+            className="testimonial-tab"
+            style={{
+                height: '10px',
+                width: index === testimonialIndex ? '45px' : '25px',
+                backgroundColor: index === testimonialIndex ? 'black' : 'gray',
+                marginRight: '5px',
+                borderRadius: '2px',
+            }}
+          ></div>
+        ));
+    };
+  
     return (
-        <section className="px-80 grid gap-12 py-20">
-            {/* Change to sectionContainer */}
-            <CustomerTestimonial
-                imgSource={fakeTestimonialCMS[testimonialIndex].imgSource}
-                imgWidth={600}
-                imgHeight={600}
-                altText={fakeTestimonialCMS[testimonialIndex].altText}
-                heading={fakeTestimonialCMS[testimonialIndex].heading}
-                testimonial={fakeTestimonialCMS[testimonialIndex].testimonial}
-                author={fakeTestimonialCMS[testimonialIndex].author}
-            />
-        </section>
-    )
-}
+      <section className="px-80 py-20">
+        {/* Change to sectionContainer */}
+        <CustomerTestimonial
+          imgSource={fakeTestimonialCMS[testimonialIndex].imgSource}
+          imgWidth={600}
+          imgHeight={600}
+          altText={fakeTestimonialCMS[testimonialIndex].altText}
+          heading={fakeTestimonialCMS[testimonialIndex].heading}
+          testimonial={fakeTestimonialCMS[testimonialIndex].testimonial}
+          author={fakeTestimonialCMS[testimonialIndex].author}
+        />
+  
+        <div className="testimonial-tabs flex">
+          {renderTestimonials()}
+        </div>
+      </section>
+    );
+  }
