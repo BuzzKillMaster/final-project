@@ -16,10 +16,9 @@ export default function TrainingSection() {
         <SectionContainer>
             <SectionHeader subheading="Jeg tilbyder" heading="Adfærdstræning på Fyn" description="Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor.Lorem ipsum dolor sit amet consectetur. Sodales id facilisi etiam purus tempor."/>
 
-            <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
+            <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12 mt-20">
                 {
                     fakeCMS.map( (item, index) => (
-
                         <DynamicCard
                             key = {index}
                             imgSource={item.imgSource}
@@ -29,9 +28,7 @@ export default function TrainingSection() {
                             heading={item.heading}
                             description={item.description}
                             flexDirection="flex-col"
-                        >
-                        
-                        </DynamicCard>
+                        />
                     ))
                 }
             </ul>

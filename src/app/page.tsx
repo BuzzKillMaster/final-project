@@ -7,7 +7,7 @@ import ApproachSection from "@/components/sections/ApproachSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import GuideSection from "@/components/sections/GuideSection";
 import ContactSection from "@/components/sections/ContactSection";
-import FakeTrainingSection from "@/components/sections/FakeTrainingSection";
+import TrainingSection from "@/components/sections/TrainingSection";
 
 export default function Home() {
     return (
@@ -16,7 +16,7 @@ export default function Home() {
 
             <main>
                 <HeroSection/>
-                <FakeTrainingSection/>
+                <TrainingSection/>
                 <ProfileSection/>
                 <QualificationsSection/>
                 <ApproachSection/>
