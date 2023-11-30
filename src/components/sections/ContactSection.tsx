@@ -4,8 +4,11 @@ import ContactForm from "@/components/sections/contact/ContactForm";
 import "leaflet/dist/leaflet.css"
 import {useMemo} from "react";
 import dynamic from "next/dynamic";
+import useMockCMS from "@/MockCMS";
 
 export default function ContactSection() {
+    const {contact} = useMockCMS()
+
     const MapDisplay = useMemo(() => dynamic(
         () => import("@/components/sections/contact/LocationMap"),
         {
@@ -17,9 +20,9 @@ export default function ContactSection() {
         <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
             <div>
                 <SectionHeader
-                    subheading={"Lorem ipsum"}
-                    heading={"Lorem ipsum dolor sit amet"}
-                    description={"Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta."}
+                    subheading={contact.subheading}
+                    heading={contact.heading}
+                    description={contact.description}
                 />
 
                 <ContactForm />

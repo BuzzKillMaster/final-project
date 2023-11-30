@@ -1,41 +1,22 @@
 'use client'
 
+// Vicky
+
 import CustomerTestimonial from "../CustomerTestimonial";
 import {useState, useEffect} from 'react'
 import SectionContainer from "@/components/sections/partials/SectionContainer";
+import useMockCMS from "@/MockCMS";
 
-// Vicky
-
-const fakeTestimonialCMS = [{
-        heading: "Testimonial 1",
-        testimonial: "Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta.",
-        imgSource: "https://fakeimg.pl/500/",
-        altText: "temp",
-        author: "Name 1",
-    },
-    {
-        heading: "Testimonial 2",
-        testimonial: "Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta.",
-        imgSource: "https://fakeimg.pl/500/",
-        altText: "temp",
-        author: "Name 2",
-    },
-    {
-        heading: "Testimonial 3",
-        testimonial: "Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta.",
-        imgSource: "https://fakeimg.pl/500/",
-        altText: "temp",
-        author: "Name 3",
-    }
-]
 
 export default function TestimonialsSection() {
+    const {testimonials} = useMockCMS()
+
     const [testimonialIndex, setTestimonialIndex] = useState(0);
   
     useEffect(() => {
       const interval = setInterval(() => {
         setTestimonialIndex((prevIndex) =>
-          prevIndex === fakeTestimonialCMS.length - 1 ? 0 : prevIndex + 1
+          prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
         )
       }, 5000)
   
@@ -47,7 +28,7 @@ export default function TestimonialsSection() {
     }
   
     const renderTestimonials = () => {
-        return fakeTestimonialCMS.map((_, index) => (
+        return testimonials.map((_, index) => (
           <div
             key={index}
             onClick={() => showTestimonial(index)}
@@ -65,13 +46,13 @@ export default function TestimonialsSection() {
     return (
       <SectionContainer>
         <CustomerTestimonial
-          imgSource={fakeTestimonialCMS[testimonialIndex].imgSource}
+          imgSource={testimonials[testimonialIndex].image}
           imgWidth={600}
           imgHeight={600}
-          altText={fakeTestimonialCMS[testimonialIndex].altText}
-          heading={fakeTestimonialCMS[testimonialIndex].heading}
-          testimonial={fakeTestimonialCMS[testimonialIndex].testimonial}
-          author={fakeTestimonialCMS[testimonialIndex].author}
+          altText={testimonials[testimonialIndex].imageAlt}
+          heading={testimonials[testimonialIndex].heading}
+          testimonial={testimonials[testimonialIndex].quote}
+          author={testimonials[testimonialIndex].name}
         />
   
         <div className="testimonial-tabs flex gap-1">

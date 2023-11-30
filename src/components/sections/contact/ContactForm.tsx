@@ -3,6 +3,7 @@
 import * as Yup from 'yup';
 import {useFormik} from "formik";
 import InputField from "@/components/sections/contact/InputField";
+import useMockCMS from "@/MockCMS";
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -15,6 +16,8 @@ const validationSchema = Yup.object().shape({
 })
 
 export default function ContactForm() {
+    const {contact: {form}} = useMockCMS()
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -23,17 +26,17 @@ export default function ContactForm() {
         },
         validationSchema: validationSchema,
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            alert(JSON.stringify(values, null, 2))
         },
     })
 
     return (
         <form onSubmit={formik.handleSubmit} className={"grid gap-4 mt-4"}>
             <InputField
-                label={"Name"}
+                label={form.nameLabel}
                 name={"name"}
                 inputType={"text"}
-                placeholder={"John Doe"}
+                placeholder={form.namePlaceholder}
                 value={formik.values.name}
                 onChange={formik.handleChange}
                 required={true}
@@ -41,10 +44,10 @@ export default function ContactForm() {
             />
 
             <InputField
-                label={"Email"}
+                label={form.emailLabel}
                 name={"email"}
                 inputType={"email"}
-                placeholder={"john@example.com"}
+                placeholder={form.emailPlaceholder}
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 required={true}
@@ -52,10 +55,10 @@ export default function ContactForm() {
             />
 
             <InputField
-                label={"Message"}
+                label={form.messageLabel}
                 name={"message"}
                 inputType={"textarea"}
-                placeholder={"Hello, I would like to ..."}
+                placeholder={form.messagePlaceholder}
                 value={formik.values.message}
                 onChange={formik.handleChange}
                 required={true}

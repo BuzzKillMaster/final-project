@@ -1,28 +1,24 @@
 import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import DynamicCard from "@/components/DynamicCard";
-
-const data = Array(3).fill({
-    title: "Lorem ipsum dolor sit amet",
-    description: "Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta.",
-    imageUri: "https://fakeimg.pl/500/",
-    imageAlt: "temp",
-})
+import useMockCMS from "@/MockCMS";
 
 export default function QualificationsSection() {
+    const {qualifications} = useMockCMS()
+
     return (
         <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
-            <SectionHeader subheading={"Lorem ipsum"} heading={"Lorem ipsum dolor sit amet"} description={"Vivamus quis semper tortor. Duis sapien sem, pretium non tristique nec, volutpat ut diam. Proin euismod mollis purus id porta."} />
+            <SectionHeader subheading={qualifications.heading} heading={qualifications.heading} description={qualifications.description} />
 
             <div className={"grid gap-12 mt-20"}>
                 {
-                    data.map((item, index) => (
+                    qualifications.cards.map((item, index) => (
                         <DynamicCard
                             key={index}
-                            heading={item.title}
+                            heading={item.heading}
                             description={item.description}
                             flexDirection={"flex-row"}
-                            imgSource={item.imageUri}
+                            imgSource={item.image}
                             altText={item.imageAlt}
                             imgHeight={100}
                             imgWidth={100}
