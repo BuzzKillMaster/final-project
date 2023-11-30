@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
       }, 5000)
   
       return () => clearInterval(interval);
-    }, [testimonialIndex])
+    }, [testimonialIndex, testimonials.length])
   
     const showTestimonial = (index:number) => {
       setTestimonialIndex(index)
