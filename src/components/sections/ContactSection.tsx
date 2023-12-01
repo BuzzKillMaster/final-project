@@ -1,4 +1,3 @@
-import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import ContactForm from "@/components/sections/contact/ContactForm";
 import "leaflet/dist/leaflet.css"
@@ -17,18 +16,15 @@ export default function ContactSection() {
     ), [])
 
     return (
-        <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
-            <div>
-                <SectionHeader
-                    subheading={contact.subheading}
-                    heading={contact.heading}
-                    description={contact.description}
-                />
-
+        <section className={"grid lg:grid-cols-2 px-4"}>
+            <div className={"justify-self-end py-20 lg:pr-10 w-full lg:max-w-[40rem]"}>
+                <SectionHeader subheading={contact.subheading} heading={contact.heading} description={contact.description} />
                 <ContactForm />
             </div>
 
-            <MapDisplay />
-        </SectionContainer>
+            <div className={"-mx-4 lg:ml-0"}>
+                <MapDisplay />
+            </div>
+        </section>
     )
 }
