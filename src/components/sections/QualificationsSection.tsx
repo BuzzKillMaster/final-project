@@ -8,7 +8,7 @@ export default function QualificationsSection() {
 
     return (
         <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
-            <SectionHeader subheading={qualifications.heading} heading={qualifications.heading} description={qualifications.description} />
+            <SectionHeader subheading={qualifications.subheading} heading={qualifications.heading} description={qualifications.description} />
 
             <div className={"grid gap-12 mt-20"}>
                 {
