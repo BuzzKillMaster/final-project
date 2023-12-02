@@ -21,7 +21,7 @@ export default function HeroSection() {
 
     return (
         <section className={"px-4 grid items-center lg:grid-cols-2"}>
-            <div className={"px-4 lg:px-0 col-start-1 row-start-1 text-neutral-50 md:text-neutral-950 z-10 justify-self-end lg:max-w-[40rem]"}>
+            <div className={"px-4 lg:px-0 col-start-1 row-start-1 text-neutral-50 md:text-neutral-950 z-10 justify-self-end w-full lg:max-w-[40rem]"}>
                 <SectionHeader
                     subheading={hero.subheading}
                     heading={hero.heading}
