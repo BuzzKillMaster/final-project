@@ -1,10 +1,18 @@
 import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import DynamicCard from "@/components/DynamicCard";
-import useMockCMS from "@/MockCMS";
+import {Approach, Approach_Cards} from "@/../tina/__generated__/types";
+import client from "@/../tina/__generated__/client";
 
-export default function ApproachSection() {
-    const {approach} = useMockCMS()
+export default async function ApproachSection() {
+    let approach: Approach
+    let approachCards: Approach_Cards[] | undefined
+
+    const approachQuery = await client.queries.approach({ relativePath: 'APPROACH.md' })
+    const approachCardsQuery = await client.queries.approach_cardsConnection()
+
+    approach = approachQuery.data.approach as Approach
+    approachCards = approachCardsQuery.data.approach_cardsConnection.edges?.map((edge) => edge?.node as Approach_Cards)
 
     return (
         <SectionContainer>
@@ -12,7 +20,7 @@ export default function ApproachSection() {
 
             <div className={"grid md:grid-cols-3 gap-12 mt-20"}>
                 {
-                    approach.cards.map((item, index) => (
+                    approachCards?.map((item, index) => (
                         <DynamicCard
                             key={index}
                             heading={item.heading}

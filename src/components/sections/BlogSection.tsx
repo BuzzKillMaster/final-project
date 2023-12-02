@@ -21,10 +21,10 @@ export default function BlogSection() {
 
     return (
         <SectionContainer containerClassName={"grid gap-12"}>
-            <SectionHeader subheading={guide.subheading} heading={guide.heading} description={guide.description} />
+            <SectionHeader subheading={blog.subheading} heading={blog.heading} description={blog.description} />
 
             <div>
-                <PrimaryButton type={"button"} text={guide.button} onClick={() => alert("Hello World!")} />
+                <PrimaryButton type={"button"} text={blog.button} onClick={() => {}} />
             </div>
         </SectionContainer>
     )

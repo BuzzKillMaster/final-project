@@ -1,17 +1,20 @@
 import SectionContainer from "@/components/sections/partials/SectionContainer";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import Image from "next/image";
-import useMockCMS from "@/MockCMS";
+import {Profile} from "@/../tina/__generated__/types";
+import client from "@/../tina/__generated__/client";
 
-export default function ProfileSection() {
-    const {profile} = useMockCMS()
+export default async function ProfileSection() {
+    let profile: Profile
+    const profileQuery = await client.queries.profile({ relativePath: 'PROFILE.md' })
+    profile = profileQuery.data.profile as Profile
 
     return (
         <SectionContainer containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
             <Image
                 className={"justify-self-center col-start-1 md:col-start-2"}
-                src={profile.image}
-                alt={profile.imageAlt}
+                src={profile.profile_image}
+                alt={profile.profile_image_alt}
                 width={500}
                 height={500}
             />
