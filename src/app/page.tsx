@@ -5,7 +5,7 @@ import ProfileSection from "@/components/sections/ProfileSection";
 import QualificationsSection from "@/components/sections/QualificationsSection";
 import ApproachSection from "@/components/sections/ApproachSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import GuideSection from "@/components/sections/GuideSection";
+import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TrainingSection from "@/components/sections/TrainingSection";
 
@@ -21,7 +21,7 @@ export default function Home() {
                 <QualificationsSection/>
                 <ApproachSection/>
                 <TestimonialsSection/>
-                <GuideSection/>
+                <BlogSection/>
                 <ContactSection/>
             </main>
 

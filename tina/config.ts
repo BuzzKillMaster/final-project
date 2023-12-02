@@ -392,6 +392,46 @@ export default defineConfig({
             },
 
             {
+                name: "blog",
+                label: "Blog",
+                path: "content/blog",
+
+                ui: {
+                    allowedActions: {
+                        create: true,
+                        delete: false,
+                    },
+                },
+
+                fields: [
+                    {
+                        type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        label: "Subheading",
+                        name: "subheading",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        label: "Description",
+                        name: "description",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        label: "Blog Button",
+                        name: "button",
+                        required: true,
+                    },
+                ]
+            },
+
+            {
                 name: "contact",
                 label: "Contact",
                 path: "content/contact",
