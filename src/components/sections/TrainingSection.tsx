@@ -17,7 +17,7 @@ export default async function TrainingSection() {
     trainingCards = trainingCardsQuery.data.training_cardsConnection.edges?.map((edge) => edge?.node as Training_Cards)
 
     return (
-        <SectionContainer>
+        <SectionContainer sectionId={"training_section"}>
             <SectionHeader subheading={training.subheading} heading={training.heading} description={training.description} />
 
             <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-12 mt-20">

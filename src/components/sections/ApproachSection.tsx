@@ -15,7 +15,7 @@ export default async function ApproachSection() {
     approachCards = approachCardsQuery.data.approach_cardsConnection.edges?.map((edge) => edge?.node as Approach_Cards)
 
     return (
-        <SectionContainer>
+        <SectionContainer sectionId={"approach_section"}>
             <SectionHeader subheading={approach.subheading} heading={approach.heading} description={approach.description} />
 
             <div className={"grid md:grid-cols-3 gap-12 mt-20"}>

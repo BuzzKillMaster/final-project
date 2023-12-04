@@ -10,7 +10,7 @@ export default async function ProfileSection() {
     profile = profileQuery.data.profile as Profile
 
     return (
-        <SectionContainer containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
+        <SectionContainer sectionId={"profile_section"} containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
             <Image
                 className={"justify-self-center col-start-1 md:col-start-2"}
                 src={profile.profile_image}

@@ -15,7 +15,7 @@ export default async function QualificationsSection() {
     qualificationsCards = qualificationsCardsQuery.data.qualifications_cardsConnection.edges?.map((edge) => edge?.node as Qualifications_Cards)
 
     return (
-        <SectionContainer containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
+        <SectionContainer sectionId={"qualifications_section"} containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
             <SectionHeader subheading={qualifications.subheading} heading={qualifications.heading} description={qualifications.description} />
 
             <div className={"grid gap-12 mt-20"}>

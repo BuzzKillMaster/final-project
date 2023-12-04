@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <SectionContainer>
+        <SectionContainer sectionId={"testimonials_section"}>
             <CustomerTestimonial
                 imgSource={testimonials[testimonialIndex].image}
                 imgWidth={600}

@@ -4,11 +4,12 @@ interface SectionContainerProps {
     children: ReactNode
     sectionClassName?: string
     containerClassName?: string
+    sectionId?: string
 }
 
-export default function SectionContainer({children, sectionClassName = "", containerClassName = ""}: SectionContainerProps) {
+export default function SectionContainer({children, sectionClassName = "", containerClassName = "", sectionId = ""}: SectionContainerProps) {
     return (
-        <section className={"py-20 px-4 " + sectionClassName}>
+        <section id={sectionId} className={"py-20 px-4 " + sectionClassName}>
             <div className={"container mx-auto max-w-7xl " + containerClassName}>
                 {children}
             </div>

@@ -20,7 +20,7 @@ export default function HeroSection() {
     if (!hero) return null
 
     return (
-        <section className={"px-4 grid items-center lg:grid-cols-2"}>
+        <section id={"hero_section"} className={"px-4 grid items-center lg:grid-cols-2"}>
             <div className={"px-4 lg:px-0 col-start-1 row-start-1 text-neutral-50 md:text-neutral-950 z-10 justify-self-end w-full lg:max-w-[40rem]"}>
                 <SectionHeader
                     subheading={hero.subheading}
