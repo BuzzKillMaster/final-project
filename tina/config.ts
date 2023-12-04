@@ -43,28 +43,32 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Hero Button",
                         name: "button",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: 'Hero Video',
@@ -89,18 +93,20 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
@@ -166,28 +172,32 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Profile Image",
                         name: "profile_image",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Profile Image Alt",
@@ -212,18 +222,20 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
@@ -250,18 +262,21 @@ export default defineConfig({
                         name: "heading",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Description",
                         name: "description",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image",
                         name: "image",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image Alt",
@@ -286,18 +301,20 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
@@ -324,18 +341,21 @@ export default defineConfig({
                         name: "heading",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Description",
                         name: "description",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image",
                         name: "image",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image Alt",
@@ -364,24 +384,28 @@ export default defineConfig({
                         name: "heading",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Quote",
                         name: "quote",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Name",
                         name: "name",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image",
                         name: "image",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Image Alt",
@@ -398,7 +422,7 @@ export default defineConfig({
 
                 ui: {
                     allowedActions: {
-                        create: true,
+                        create: false,
                         delete: false,
                     },
                 },
@@ -406,22 +430,25 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
                     },
+
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
                     },
+
                     {
                         type: "string",
                         label: "Blog Button",
@@ -446,13 +473,6 @@ export default defineConfig({
                 fields: [
                     {
                         type: "string",
-                        label: "Heading",
-                        name: "heading",
-                        required: true,
-                    },
-
-                    {
-                        type: "string",
                         label: "Subheading",
                         name: "subheading",
                         required: true,
@@ -460,6 +480,13 @@ export default defineConfig({
 
                     {
                         type: "string",
+                        label: "Heading",
+                        name: "heading",
+                        required: true,
+                    },
+
+                    {
+                        type: "rich-text",
                         label: "Description",
                         name: "description",
                         required: true,
