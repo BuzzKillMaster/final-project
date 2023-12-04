@@ -17,7 +17,7 @@ export default function ContactSection() {
                 <ContactForm />
             </div>
 
-            <div className={"-mx-4 lg:ml-0"}>
+            <div className={"-mx-4 lg:ml-0 z-0"}>
                 <MapDisplay />
             </div>
         </section>

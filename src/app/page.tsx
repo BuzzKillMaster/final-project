@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TrainingSection from "@/components/sections/TrainingSection";
+import BackToTopButton from "@/components/app/navigation/BackToTopButton";
 
 export default function Home() {
     return (
@@ -26,6 +27,8 @@ export default function Home() {
             </main>
 
             <AppFooter/>
+
+             <BackToTopButton/>
         </>
     )
 }
