@@ -11,13 +11,23 @@ export default async function ProfileSection() {
 
     return (
         <SectionContainer sectionId={"profile_section"} containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
-            <Image
-                className={"justify-self-center col-start-1 md:col-start-2"}
-                src={profile.profile_image}
-                alt={profile.profile_image_alt}
-                width={500}
-                height={500}
-            />
+            <div className={"grid justify-self-center col-start-1 md:col-start-2"}>
+                <Image
+                    className={"col-start-1 row-start-1"}
+                    src={profile.profile_image}
+                    alt={profile.profile_image_alt}
+                    width={1000}
+                    height={1000}
+                />
+
+                <Image
+                    className={"col-start-1 row-start-1"}
+                    src={"/profile_mask.png"}
+                    alt={profile.profile_image_alt}
+                    width={1000}
+                    height={1000}
+                />
+            </div>
 
             <div className={"md:col-start-1 md:row-start-1"}>
                 <SectionHeader
