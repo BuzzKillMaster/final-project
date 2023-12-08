@@ -11,9 +11,9 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({subheading, heading, description}: SectionHeaderProps) {
     return (
-        <header className={"grid gap-4 whitespace-pre-line"}>
-            <h3 className={quicksand.className + " text-2xl mb-2"}>{subheading}</h3>
-            <h2 className={quicksand.className + " text-5xl mb-4"}>{heading}</h2>
+        <header className={"whitespace-pre-line"}>
+            <h3 className={quicksand.className + " text-2xl font-medium"}>{subheading}</h3>
+            <h2 className={quicksand.className + " text-5xl font-semibold mt-4 mb-6 leading-snug"}>{heading}</h2>
 
             <div className={"max-w-lg grid gap-4 mb-8"}>
                 <TinaMarkdown content={description} />
