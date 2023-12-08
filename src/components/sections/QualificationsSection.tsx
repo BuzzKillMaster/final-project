@@ -18,7 +18,7 @@ export default async function QualificationsSection() {
         <SectionContainer sectionId={"qualifications_section"} sectionClassName={"bg-neutral-50"} containerClassName={"grid md:grid-cols-2 gap-20 items-center"}>
             <SectionHeader subheading={qualifications.subheading} heading={qualifications.heading} description={qualifications.description} />
 
-            <div className={"grid gap-12 mt-20"}>
+            <div className={"grid gap-12"}>
                 {
                     qualificationsCards?.map((item, index) => (
                         <DynamicCard
