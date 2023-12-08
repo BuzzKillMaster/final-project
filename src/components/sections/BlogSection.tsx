@@ -24,7 +24,7 @@ export default function BlogSection() {
             <SectionHeader subheading={blog.subheading} heading={blog.heading} description={blog.description} />
 
             <div>
-                <PrimaryButton type={"button"} text={blog.button} onClick={() => {}} />
+                <PrimaryButton type={"button"} text={blog.button} onClick={() => {}} secondary={true}/>
             </div>
         </SectionContainer>
     )

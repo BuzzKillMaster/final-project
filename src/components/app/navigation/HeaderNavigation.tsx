@@ -7,10 +7,10 @@ import {useState} from "react";
 import {BsArrowRight} from "react-icons/bs";
 
 const destinations = [
-    {
-        name: "Home",
-        target: "hero_section"
-    },
+    // {
+    //     name: "Home",
+    //     target: "hero_section"
+    // },
     {
         name: "Training",
         target: "training_section"
