@@ -13,7 +13,7 @@ export default function ContactSection() {
 
     return (
         <section id={"contact_section"} className={"bg-primary grid lg:grid-cols-2 px-4"}>
-            <div className={"justify-self-end py-20 lg:pr-10 w-full lg:max-w-[40rem]"}>
+            <div className={"justify-self-end py-24 lg:pr-10 w-full lg:max-w-[40rem]"}>
                 <ContactForm />
             </div>
 
