@@ -4,7 +4,7 @@ description: >-
   Med års erfaring tilpasser jeg træningen individuelt til din hund. Jeg
   kombinerer metoder for at finde den optimale løsning til din hunds specifikke
   udfordring.
-image: 'https://fakeimg.pl/500'
+image: 'http://localhost:3000/approach/experience.png'
 imageAlt: foobar
 ---
 
