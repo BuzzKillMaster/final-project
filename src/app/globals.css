@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-primary {
+    background-color: #E5E9E7;
+}
+
 @media (min-width: 1024px) {
     .hero_video_container {
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);

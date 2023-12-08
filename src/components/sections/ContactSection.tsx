@@ -12,7 +12,7 @@ export default function ContactSection() {
     ), [])
 
     return (
-        <section id={"contact_section"} className={"bg-neutral-50 grid lg:grid-cols-2 px-4 shadow"}>
+        <section id={"contact_section"} className={"bg-primary grid lg:grid-cols-2 px-4"}>
             <div className={"justify-self-end py-20 lg:pr-10 w-full lg:max-w-[40rem]"}>
                 <ContactForm />
             </div>

@@ -1,10 +1,14 @@
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ subsets: ['latin'] })
+
 interface NavLinkProps {
     text: string
 }
 
-export default function NavLink({text,}: NavLinkProps) {
+export default function NavLink({text}: NavLinkProps) {
     return (
-        <li className={"cursor-pointer"}>
+        <li className={quicksand.className + " font-medium cursor-pointer hover:text-[#AA7F55]"}>
             {text}
         </li>
     )

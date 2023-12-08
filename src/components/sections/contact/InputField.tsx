@@ -1,4 +1,7 @@
 import {ChangeEvent} from "react";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ subsets: ['latin'] })
 
 interface InputFieldProps {
     label: string
@@ -11,14 +14,16 @@ interface InputFieldProps {
     error?: string
 }
 
+const INPUT_CLASSES = "rounded border border-neutral-800 p-2"
+
 export default function InputField({label, name, inputType, placeholder, value, onChange, required, error}: InputFieldProps) {
     return (
-        <div className={"flex flex-col gap-2"}>
+        <div className={quicksand.className + " flex flex-col gap-2 font-semibold"}>
             <label htmlFor={name}>{label}</label>
 
             {inputType !== "textarea" && (
                 <input
-                    className={"border border-gray-300 p-2"}
+                    className={INPUT_CLASSES}
                     id={name}
                     name={name}
                     type={inputType}
@@ -31,7 +36,7 @@ export default function InputField({label, name, inputType, placeholder, value, 
 
             {inputType === "textarea" && (
                 <textarea
-                    className={"border border-gray-300 p-2 resize-none"}
+                    className={INPUT_CLASSES + " resize-none"}
                     id={name}
                     name={name}
                     placeholder={placeholder}
