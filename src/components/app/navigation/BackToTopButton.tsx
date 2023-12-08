@@ -14,7 +14,7 @@ export default function BackToTopButton() {
     return (
         <motion.div whileHover={{
             scale: 1.05,
-        }} className={"p-4 rounded shadow bg-white fixed right-12 bottom-12 cursor-pointer z-50"} onClick={handleClick}>
+        }} className={"p-4 rounded shadow bg-white fixed right-12 bottom-12 cursor-pointer z-30"} onClick={handleClick}>
             <IoMdArrowUp />
         </motion.div>
     )
