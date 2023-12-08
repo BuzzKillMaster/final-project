@@ -14,7 +14,7 @@ interface InputFieldProps {
     error?: string
 }
 
-const INPUT_CLASSES = "rounded border border-neutral-800 p-2"
+const INPUT_CLASSES = "rounded border border-neutral-800 p-3"
 
 export default function InputField({label, name, inputType, placeholder, value, onChange, required, error}: InputFieldProps) {
     return (
