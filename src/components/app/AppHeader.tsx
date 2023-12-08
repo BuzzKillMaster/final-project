@@ -1,10 +1,11 @@
 import HeaderNavigation from "@/components/app/navigation/HeaderNavigation";
+import AppLogo from "@/components/app/AppLogo";
 
 export default function AppHeader() {
     return (
-        <header className={"p-12 bg-white shadow"}>
+        <header className={"p-6 bg-white shadow"}>
             <div className={"container mx-auto max-w-7xl flex items-center justify-between"}>
-                <h1 className={"text-4xl"}>Lorem Ipsum</h1>
+                <AppLogo/>
 
                 <HeaderNavigation/>
             </div>
