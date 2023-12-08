@@ -1,6 +1,7 @@
 'use client'
 
 import {IoMdArrowUp} from "react-icons/io";
+import {motion} from "framer-motion";
 
 export default function BackToTopButton() {
     const handleClick = () => {
@@ -11,8 +12,10 @@ export default function BackToTopButton() {
     }
 
     return (
-        <div className={"p-4 rounded shadow bg-white fixed right-12 bottom-12 cursor-pointer z-50"} onClick={handleClick}>
+        <motion.div whileHover={{
+            scale: 1.05,
+        }} className={"p-4 rounded shadow bg-white fixed right-12 bottom-12 cursor-pointer z-50"} onClick={handleClick}>
             <IoMdArrowUp />
-        </div>
+        </motion.div>
     )
 }

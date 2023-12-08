@@ -20,7 +20,7 @@ export default function BlogSection() {
     if (!blog) return null
 
     return (
-        <SectionContainer sectionId={"blog_section"} containerClassName={"grid gap-12"}>
+        <SectionContainer sectionId={"blog_section"}>
             <SectionHeader subheading={blog.subheading} heading={blog.heading} description={blog.description} />
 
             <div>
