@@ -1,6 +1,6 @@
 export default function AppFooter() {
     return (
-        <footer className={"py-12 px-4"}>
+        <footer className={"py-12 px-4 shadow"}>
             <div className={"container mx-auto max-w-7xl"}>
                 <div className={"flex flex-col md:flex-row gap-12 items-center justify-between"}>
                     <h2 className={"text-2xl font-semibold"}>Company Name ApS</h2>
