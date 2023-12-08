@@ -16,7 +16,7 @@ description: >
   Sammen vil vi arbejde på at opbygge en dybere forståelse for din hund og ruste
   dig med de nødvendige færdigheder til at håndtere adfærdsproblemer på en
   positiv og effektiv måde.
-profile_image: 'https://fakeimg.pl/500'
+profile_image: 'http://localhost:3000/profile.jpg'
 profile_image_alt: foobar
 ---
 
