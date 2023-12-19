@@ -6,7 +6,7 @@ export default function AppFooter() {
             <div className={"container mx-auto max-w-7xl"}>
                 <AppLogo/>
 
-                <p className={"mt-8 opacity-75 font-medium text-center"}>Copyright 2023 &copy; Borreby Adfærdstræning. All rights reserved.</p>
+                <p className={"mt-8 opacity-75 font-medium text-center"}>Copyright 2023 &copy; Borreby Adfærdstræning. Alle rettigheder reserveret.</p>
             </div>
         </footer>
     )

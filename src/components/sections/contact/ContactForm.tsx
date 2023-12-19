@@ -11,12 +11,12 @@ import SectionHeader from "@/components/sections/partials/SectionHeader";
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
-        .required('Name is required'),
+        .required('Navn er påkrævet'),
     email: Yup.string()
-        .email('Invalid email')
-        .required('Email is required'),
+        .email('Email er ikke gyldig')
+        .required('Email er påkrevet'),
     message: Yup.string()
-        .required('Message is required'),
+        .required('Besked er påkrævet'),
 })
 
 export default function ContactForm() {

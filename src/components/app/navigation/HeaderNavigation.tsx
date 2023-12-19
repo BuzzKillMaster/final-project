@@ -12,23 +12,23 @@ const destinations = [
     //     target: "hero_section"
     // },
     {
-        name: "Training",
+        name: "Træning",
         target: "training_section"
     },
     {
-        name: "Profile",
+        name: "Profil",
         target: "profile_section"
     },
     {
-        name: "Qualifications",
+        name: "Kvalifikationer",
         target: "qualifications_section"
     },
     {
-        name: "Approach",
+        name: "Tilgang",
         target: "approach_section"
     },
     {
-        name: "Testimonials",
+        name: "Udtalelser",
         target: "testimonials_section"
     },
     {
@@ -36,7 +36,7 @@ const destinations = [
         target: "blog_section"
     },
     {
-        name: "Contact",
+        name: "Kontakt",
         target: "contact_section"
     }
 ]
