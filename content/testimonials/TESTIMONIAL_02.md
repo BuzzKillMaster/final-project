@@ -7,7 +7,7 @@ quote: >-
   os!
 name: Mikkel Rasmussen
 image: >-
-  https://assets.tina.io/828af1f4-9ff6-4358-9c1e-f317b7a1cadc/testimonials/emma.jpg
+  https://assets.tina.io/828af1f4-9ff6-4358-9c1e-f317b7a1cadc/testimonials/mikkel.jpg
 imageAlt: foobar
 ---
 
