@@ -57,7 +57,7 @@ export default function HeaderNavigation() {
 
     return (
         <nav>
-            <ul className={"hidden lg:flex gap-4"}>
+            <ul className={"hidden lg:flex gap-8"}>
                 {destinations.map((destination, index) => (
                     <div key={index} onClick={() => navigate(destination.target)}>
                         <NavLink text={destination.name}/>
