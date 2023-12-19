@@ -10,7 +10,9 @@ export default async function ProfileSection() {
     profile = profileQuery.data.profile as Profile
 
     return (
-        <SectionContainer sectionId={"profile_section"} containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
+        <SectionContainer sectionId={"profile_section"} sectionClassName={"relative overflow-hidden"} containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
+            <Image src={"/background_assets/paws_01.svg"} alt={"Paws"} fill={true} className={"opacity-30"} />
+
             <div className={"grid justify-self-center col-start-1 md:col-start-2"}>
                 <div className={"col-start-1 row-start-1 w-full h-full flex items-center justify-center"}>
                     <Image

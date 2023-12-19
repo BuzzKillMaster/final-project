@@ -11,7 +11,7 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({subheading, heading, description}: SectionHeaderProps) {
     return (
-        <header className={"whitespace-pre-line"}>
+        <header className={"whitespace-pre-line relative z-10"}>
             <h3 className={quicksand.className + " text-2xl font-medium"}>{subheading}</h3>
             <h2 className={quicksand.className + " text-5xl font-semibold mt-4 mb-6 leading-snug"}>{heading}</h2>
 
