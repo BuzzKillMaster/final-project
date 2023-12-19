@@ -11,6 +11,7 @@ import {AnimatePresence} from "framer-motion";
 import {motion} from "framer-motion";
 import Image from "next/image";
 import {PiCaretLeftBold, PiCaretRightBold} from "react-icons/pi";
+import {BiSolidQuoteAltRight} from "react-icons/bi";
 
 const ANIMATION_VARIANTS = {
     initial: {
@@ -79,10 +80,7 @@ export default function TestimonialsSection() {
         <SectionContainer sectionId={"testimonials_section"} sectionClassName={"bg-primary"}
                           containerClassName={"grid grid-cols-1 items-center"}>
             <div className={"col-start-1 row-start-1 z-10"}>
-                <div className={"gap-6 hidden md:flex"}>
-                    <div className={"w-8 h-24 bg-neutral-950 rounded shadow opacity-75"}></div>
-                    <div className={"w-8 h-24 bg-neutral-950 rounded shadow opacity-75"}></div>
-                </div>
+                <BiSolidQuoteAltRight className={"text-9xl hidden md:block opacity-75"} />
 
                 <div className={"grid grid-cols-1 px-4 md:px-0"}>
                     <AnimatePresence>
