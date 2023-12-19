@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
         .required('Navn er påkrævet'),
     email: Yup.string()
         .email('Email er ikke gyldig')
-        .required('Email er påkrevet'),
+        .required('Email er påkrævet'),
     message: Yup.string()
         .required('Besked er påkrævet'),
 })
