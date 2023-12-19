@@ -82,6 +82,7 @@ export default function ContactForm() {
                 />
 
                 <PrimaryButton type={"submit"} text={contact.form_button} onClick={() =>  {}} />
+                <p className={"text-center"}>Denne formular er ikke aktiv. Den er kun til demonstration. For nu.</p>
             </form>
         </>
     )
