@@ -1,12 +1,8 @@
-'use client'
-
 import * as Yup from 'yup';
 import {useFormik} from "formik";
 import InputField from "@/components/sections/contact/InputField";
 import {Contact} from "@/../tina/__generated__/types";
-import client from "@/../tina/__generated__/client";
 import PrimaryButton from "@/components/PrimaryButton";
-import {useEffect, useState} from "react";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 
 const validationSchema = Yup.object().shape({
@@ -19,16 +15,7 @@ const validationSchema = Yup.object().shape({
         .required('Besked er påkrævet'),
 })
 
-export default function ContactForm() {
-    const [contact, setContact] = useState<Contact>()
-
-    useEffect(() => {
-        (async () => {
-            const query = await client.queries.contact({ relativePath: 'CONTACT.md' })
-            setContact(query.data.contact as Contact)
-        })()
-    }, [])
-
+export default function ContactForm({contact}: {contact: Contact}) {
     const formik = useFormik({
         initialValues: {
             name: '',
