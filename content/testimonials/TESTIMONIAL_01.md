@@ -5,7 +5,8 @@ quote: >-
   dyreadfærdsspecialists utrolige indsigt og tålmodighed, er han nu rolig og
   lydig. Jeg er dybt imponeret over den positive forandring!
 name: Emma Nielsen
-image: 'http://localhost:3000/testimonials/emma.jpg'
+image: >-
+  https://assets.tina.io/828af1f4-9ff6-4358-9c1e-f317b7a1cadc/testimonials/emma.jpg
 imageAlt: foobar
 ---
 
