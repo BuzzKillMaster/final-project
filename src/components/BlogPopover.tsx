@@ -5,6 +5,7 @@ import SectionHeader from "@/components/sections/partials/SectionHeader";
 import DynamicCard from "@/components/DynamicCard";
 import {Blog} from "../../tina/__generated__/types";
 import {MdClose} from "react-icons/md";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 const POPOVER_VARIANTS = {
     open: { y: 0 },
@@ -102,8 +103,10 @@ export default function BlogPopover({blog, hidePopover}: {blog: Blog, hidePopove
                                 />
 
 
-                                <a href={blogPost.urlDestination}
-                                   className={"text-primary-500 font-semibold hover:underline"}>{blogPost.urlText}</a>
+                                <ScrollAnimation>
+                                    <a href={blogPost.urlDestination}
+                                       className={"text-primary-500 font-semibold hover:underline"}>{blogPost.urlText}</a>
+                                </ScrollAnimation>
                             </div>
                         ))}
                     </div>
