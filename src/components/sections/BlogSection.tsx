@@ -27,6 +27,7 @@ export default function BlogSection({blog}: { blog: Blog }) {
 
                 <ScrollAnimation className={"z-10 relative"}>
                     <PrimaryButton type={"button"} text={blog.button} onClick={() => setShowPopover(!showPopover)} secondary={true}/>
+                    <a href={"https://www.facebook.com"} target={"_blank"} rel={"noreferrer"} className={"ml-4 py-4 px-8 bg-[#1877F2] text-neutral-50 rounded-full shadow font-semibold hover:brightness-125"}>Følg mig på Facebook</a>
                 </ScrollAnimation>
             </SectionContainer>
         </>
