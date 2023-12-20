@@ -6,7 +6,8 @@ quote: >-
   mere tillidsfuld. Det har været en livsforandrende oplevelse for både hende og
   os!
 name: Mikkel Rasmussen
-image: 'http://localhost:3000/testimonials/mikkel.jpg'
+image: >-
+  https://assets.tina.io/828af1f4-9ff6-4358-9c1e-f317b7a1cadc/testimonials/mikkel.jpg
 imageAlt: foobar
 ---
 
