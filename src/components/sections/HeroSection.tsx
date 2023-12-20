@@ -3,22 +3,10 @@
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import PrimaryButton from "@/components/PrimaryButton";
 import HeroVideo from "@/components/sections/hero/HeroVideo";
-import {useEffect, useState} from "react";
-import client from "@/../tina/__generated__/client";
-import {Hero} from "@/../tina/__generated__/types";
+import {Hero} from "../../../tina/__generated__/types";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
-export default function HeroSection() {
-    const [hero, setHero] = useState<Hero>()
-
-    useEffect(() => {
-        (async () => {
-            const query = await client.queries.hero({ relativePath: 'HERO.md' })
-            setHero(query.data.hero as Hero)
-        })()
-    }, [])
-
-    if (!hero) return null
-
+export default function HeroSection({hero}: { hero: Hero }) {
     return (
         <section id={"hero_section"} className={"lg:px-4 grid items-center lg:grid-cols-2 shadow relative"}>
             <div
@@ -29,10 +17,10 @@ export default function HeroSection() {
                     description={hero.description}
                 />
 
-                <PrimaryButton type={"button"} text={hero.button} onClick={() => {
-                }}/>
+                <ScrollAnimation>
+                    <PrimaryButton type={"button"} text={hero.button} onClick={() => {}}/>
+                </ScrollAnimation>
             </div>
-
 
             <div className={"lg:-mr-4 col-start-1 row-start-1 lg:col-start-2 hero_video_container"}>
                 <HeroVideo src={hero.hero_video}/>

@@ -1,3 +1,5 @@
+'use client'
+
 import * as Yup from 'yup';
 import {useFormik} from "formik";
 import InputField from "@/components/sections/contact/InputField";
@@ -5,6 +7,7 @@ import {Contact} from "@/../tina/__generated__/types";
 import PrimaryButton from "@/components/PrimaryButton";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import {IoMdCheckmark} from "react-icons/io";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -40,7 +43,7 @@ export default function ContactForm({contact}: {contact: Contact}) {
     if (!contact) return null
 
     return (
-        <>
+        <ScrollAnimation>
             <SectionHeader subheading={contact.subheading} heading={contact.heading} description={contact.description} />
 
             <form onSubmit={formik.handleSubmit} className={"grid gap-4 mt-4"}>
@@ -99,6 +102,6 @@ export default function ContactForm({contact}: {contact: Contact}) {
                 <PrimaryButton type={"submit"} text={contact.form_button} onClick={() =>  {}} disabled={!formik.isValid}/>
                 <p className={"text-center"}>Denne formular er ikke aktiv. Den er kun til demonstration. For nu.</p>
             </form>
-        </>
+        </ScrollAnimation>
     )
 }

@@ -71,16 +71,7 @@ const blogPosts: BlogPost[] = [
     },
 ]
 
-export default function BlogPopover({hidePopover}: {hidePopover: () => void}) {
-    const [blog, setBlog] = useState<Blog>()
-
-    useEffect(() => {
-        (async () => {
-            const query = await client.queries.blog({ relativePath: 'BLOG.md' })
-            setBlog(query.data.blog as Blog)
-        })()
-    }, [])
-
+export default function BlogPopover({blog, hidePopover}: {blog: Blog, hidePopover: () => void}) {
     return (
         <motion.section
             variants={POPOVER_VARIANTS}

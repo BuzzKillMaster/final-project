@@ -9,6 +9,9 @@ import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TrainingSection from "@/components/sections/TrainingSection";
 import BackToTopButton from "@/components/app/navigation/BackToTopButton";
+import HeroSectionWrapper from "@/components/sections/wrappers/HeroSectionWrapper";
+import BlogSectionWrapper from "@/components/sections/wrappers/BlogSectionWrapper";
+import TestimonialsSectionWrapper from "@/components/sections/wrappers/TestimonialsSectionWrapper";
 
 export default function Home() {
     return (
@@ -16,13 +19,13 @@ export default function Home() {
             <AppHeader/>
 
             <main>
-                <HeroSection/>
+                <HeroSectionWrapper/>
                 <TrainingSection/>
                 <ProfileSection/>
                 <QualificationsSection/>
                 <ApproachSection/>
-                <TestimonialsSection/>
-                <BlogSection/>
+                <TestimonialsSectionWrapper/>
+                <BlogSectionWrapper/>
                 <ContactSection/>
             </main>
 

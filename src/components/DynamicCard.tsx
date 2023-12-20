@@ -1,8 +1,11 @@
+'use client'
+
 // Vicky
 
 import Image from 'next/image'
 import React from 'react'
 import { ReactNode } from 'react'
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 interface DynamicCardProps {
     imgSource: string
@@ -17,7 +20,7 @@ interface DynamicCardProps {
 
 export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, heading, description, children, flexDirection}: DynamicCardProps) {
     return (
-        <div className={'flex ' + flexDirection + ' items-start gap-3 lg:gap-5'}>
+        <ScrollAnimation className={'flex ' + flexDirection + ' items-start gap-3 lg:gap-5'}>
             <Image
                 className={"shrink-0"}
                 src={imgSource}
@@ -31,6 +34,6 @@ export default function DynamicCard({imgSource, imgWidth, imgHeight, altText, he
                 <p className='text-sm lg:text-base'>{description}</p>
                 {children}
             </div>
-        </div>
+        </ScrollAnimation>
     )
 }
