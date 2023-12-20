@@ -18,6 +18,7 @@ export default function HeroSection({hero}: { hero: Hero }) {
                     subheading={hero.subheading}
                     heading={hero.heading}
                     description={hero.description}
+                    headingClassname={"text-[#955E42]"}
                 />
 
                 <ScrollAnimation>
