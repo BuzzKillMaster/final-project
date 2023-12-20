@@ -26,15 +26,15 @@ const blogPosts: BlogPost[] = [
         title: "Har din hund brug for et selvtillidsboost?",
         description: "Oplever din hund nervøsitet? Giv din bedste ven tryghed og selvtillid med konkrete råd, så hverdagssituationer ikke længere føles som en udfordring. ",
         urlText: "Læs tips om nervøsitet og angst ",
-        urlDestination: "#"
+        urlDestination: "/blog/nervous.pdf"
     },
     
     {
         image: "https://fakeimg.pl/500",
-        title: "Min hund er udfordret af trafik og cykler",
-        description: "Ser din hund cykler og biler som trusler? Få praktiske råd til at gøre gåture til en behagelig oplevelse, hvor trafik bliver en sekundær bekymring for din hund.",
-        urlText: "Læs mere om tips til sikkerhed i trafikken",
-        urlDestination: "#"
+        title: "Er din hund en lille tyran?",
+        description: "Oplever du, at din hund er aggressiv overfor andre hunde? Få indsigt i, hvordan du kan hjælpe din hund med at håndtere situationer med andre hunde.",
+        urlText: "Læs mere om aggressiv adfærd",
+        urlDestination: "/blog/behaviour.pdf"
     },
     
     {
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
         title: "Hvordan sikrer jeg, at min hvalp bliver en godt tilpasset hund?",
         description: "Hjælpe din hvalp med at forstå verden? Få indsigt og råd om socialisering, så din hvalp kan vokse op til at være en glad og velafbalanceret hund.",
         urlText: "Læs mere om socialisering af hvalpe",
-        urlDestination: "#"
+        urlDestination: "/blog/socialisation.pdf"
     },
 
     {
@@ -50,7 +50,7 @@ const blogPosts: BlogPost[] = [
         title: "Er din hund nervøs ved besøg hos dyrlægen?",
         description: "Finder din hund dyrlægebesøg og pleje skræmmende? Få praktiske råd til at gøre besøg hos dyrlægen med mere positive og stressfrie.",
         urlText: "Få tips til angst ved dyrlæge og pleje",
-        urlDestination: "#"
+        urlDestination: "/blog/veterinarian.pdf"
     },
 
     {
@@ -58,7 +58,7 @@ const blogPosts: BlogPost[] = [
         title: "Hvordan etablerer du balance i en flok af pelsede familiemedlemmer?",
         description: "Ønsker du harmoni i din hundeflok? Jeg deler strategier til at etablere klare hierarkier og skabe en tryg og kærlig atmosfære, så både du og dine pelsede venner trives.",
         urlText: "Læs mere om harmoni blandt hunde",
-        urlDestination: "#"
+        urlDestination: "/blog/multiples.pdf"
     },
 
     {
@@ -66,7 +66,7 @@ const blogPosts: BlogPost[] = [
         title: "Er din hund lidt for ivrig når den møder nye mennesker?",
         description: "Stræber din hund efter opmærksomhed ved at hoppe op? Opdag enkle og effektive strategier til at afhjælpe denne og anden uønskede adfærd og skab en behagelig oplevelse ved mødet med nye mennesker.",
         urlText: "Læs mere om tips til uønsket adfærd",
-        urlDestination: "#"
+        urlDestination: "/blog/eager.pdf"
     },
 ]
 
@@ -94,8 +94,8 @@ export default function BlogPopover({blog, hidePopover}: {blog: Blog, hidePopove
                             <div key={index} className={"flex flex-col gap-4 justify-between"}>
                                 <DynamicCard
                                     imgSource={blogPost.image}
-                                    imgWidth={150}
-                                    imgHeight={150}
+                                    imgWidth={0}
+                                    imgHeight={0}
                                     altText={blogPost.title}
                                     heading={blogPost.title}
                                     description={blogPost.description}
@@ -105,6 +105,7 @@ export default function BlogPopover({blog, hidePopover}: {blog: Blog, hidePopove
 
                                 <ScrollAnimation>
                                     <a href={blogPost.urlDestination}
+                                       target={"_blank"}
                                        className={"text-primary-500 font-semibold hover:underline"}>{blogPost.urlText}</a>
                                 </ScrollAnimation>
                             </div>
