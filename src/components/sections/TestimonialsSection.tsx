@@ -6,7 +6,6 @@ import CustomerTestimonial from "../CustomerTestimonial";
 import {useState, useEffect, useCallback} from 'react'
 import SectionContainer from "@/components/sections/partials/SectionContainer";
 import {Testimonials} from "@/../tina/__generated__/types";
-import client from "@/../tina/__generated__/client";
 import {AnimatePresence} from "framer-motion";
 import {motion} from "framer-motion";
 import Image from "next/image";

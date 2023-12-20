@@ -3,9 +3,7 @@
 import {motion} from "framer-motion";
 import SectionHeader from "@/components/sections/partials/SectionHeader";
 import DynamicCard from "@/components/DynamicCard";
-import {useEffect, useState} from "react";
 import {Blog} from "../../tina/__generated__/types";
-import client from "../../tina/__generated__/client";
 import {MdClose} from "react-icons/md";
 
 const POPOVER_VARIANTS = {

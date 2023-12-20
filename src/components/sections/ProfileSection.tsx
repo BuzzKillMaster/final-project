@@ -3,7 +3,6 @@ import SectionHeader from "@/components/sections/partials/SectionHeader";
 import Image from "next/image";
 import {Profile} from "@/../tina/__generated__/types";
 import client from "@/../tina/__generated__/client";
-import ScrollAnimation from "@/components/ScrollAnimation";
 import ProfileImage from "@/components/sections/profile/ProfileImage";
 
 export default async function ProfileSection() {
