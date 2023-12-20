@@ -72,7 +72,7 @@ export default function TestimonialsSection({testimonials}: { testimonials: Test
         <SectionContainer sectionId={"testimonials_section"} sectionClassName={"bg-primary"}
                           containerClassName={"grid grid-cols-1 items-center"}>
             <ScrollAnimation className={"col-start-1 row-start-1 z-10"}>
-                <BiSolidQuoteAltRight className={"text-9xl hidden md:block opacity-75"} />
+                <BiSolidQuoteAltRight className={"text-9xl hidden md:block opacity-75 text-[#294E3D]"} />
 
                 <div className={"grid grid-cols-1 px-4 md:px-0"}>
                     <AnimatePresence>
@@ -98,7 +98,7 @@ export default function TestimonialsSection({testimonials}: { testimonials: Test
                         <div
                             key={index}
                             onClick={() => showTestimonial(index)}
-                            className={(index === testimonialIndex ? "w-12 bg-neutral-900" : "w-8 bg-neutral-100 hover:bg-neutral-400") + " testimonial-tab h-4 rounded shadow cursor-pointer"}
+                            className={(index === testimonialIndex ? "w-12 bg-[#754B3E]" : "w-8 bg-[#DFCFB4] hover:brightness-75") + " testimonial-tab h-4 rounded shadow cursor-pointer"}
                         ></div>
                     ))}
                 </div>
