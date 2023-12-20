@@ -91,7 +91,7 @@ export default function BlogPopover({hidePopover}: {hidePopover: () => void}) {
             className={"fixed h-screen w-screen inset-0 bg-neutral-100 z-50"}
         >
             <div className={"py-24 px-4 relative h-full w-full overflow-scroll"}>
-                <div className={"absolute right-24 bg-neutral-200 rounded-full hover:bg-neutral-400 cursor-pointer"} onClick={hidePopover}>
+                <div className={"absolute top-12 right-12 bg-neutral-200 rounded-full hover:bg-neutral-400 cursor-pointer"} onClick={hidePopover}>
                     <MdClose className={"h-8 w-8 m-4"}/>
                 </div>
 
