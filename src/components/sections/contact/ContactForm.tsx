@@ -80,26 +80,25 @@ export default function ContactForm({contact}: {contact: Contact}) {
                     error={formik.errors.message}
                 />
 
-                <div className={"flex items-start py-4 gap-4"}>
-                    <div className={"p-1 border-2 border-neutral-700 rounded cursor-pointer"}>
-                        <IoMdCheckmark className={formik.values.acceptTerms ? "visible" : "invisible"} />
+                <input
+                    id="acceptTerms"
+                    name="acceptTerms"
+                    type="checkbox"
+                    className={"hidden"}
+                    checked={formik.values.acceptTerms}
+                    onChange={formik.handleChange}
+                />
+
+                <label htmlFor="acceptTerms" className={"py-4 cursor-pointer flex items-start gap-4"}>
+                    <div className={"p-1 border-2 border-neutral-700 rounded cursor-pointer inline-block"}>
+                        <IoMdCheckmark className={formik.values.acceptTerms ? "visible" : "invisible"}/>
                     </div>
 
-                    <input
-                        id="acceptTerms"
-                        name="acceptTerms"
-                        type="checkbox"
-                        className={"hidden"}
-                        checked={formik.values.acceptTerms}
-                        onChange={formik.handleChange}
-                    />
+                    <span className={"inline-block"}>Jeg acceptere at Borreby Adfærdstræning må benytte mine oplysninger til at kontakte mig.</span>
+                </label>
 
-                    <label htmlFor="acceptTerms" className={"cursor-pointer"}>
-                        Jeg acceptere at Borreby Adfærdstræning må benytte mine oplysninger til at kontakte mig.
-                    </label>
-                </div>
-
-                <PrimaryButton type={"submit"} text={contact.form_button} onClick={() =>  {}} disabled={!formik.isValid}/>
+                <PrimaryButton type={"submit"} text={contact.form_button} onClick={() => {
+                }} disabled={!formik.isValid}/>
                 <p className={"text-center"}>Denne formular er ikke aktiv. Den er kun til demonstration. For nu.</p>
             </form>
         </ScrollAnimation>
