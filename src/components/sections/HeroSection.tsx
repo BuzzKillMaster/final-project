@@ -5,10 +5,13 @@ import PrimaryButton from "@/components/PrimaryButton";
 import HeroVideo from "@/components/sections/hero/HeroVideo";
 import {Hero} from "../../../tina/__generated__/types";
 import ScrollAnimation from "@/components/ScrollAnimation";
+import Image from "next/image";
 
 export default function HeroSection({hero}: { hero: Hero }) {
     return (
         <section id={"hero_section"} className={"lg:px-4 grid items-center lg:grid-cols-2 shadow relative"}>
+            <Image src={"/background_assets/paws_01.svg"} alt={"Paws"} fill={true} className={"opacity-30"} />
+
             <div
                 className={"py-12 lg:py-0 px-4 lg:px-0 col-start-1 row-start-1 text-neutral-50 lg:text-neutral-950 relative z-10 justify-self-end w-full lg:max-w-[40rem]"}>
                 <SectionHeader
