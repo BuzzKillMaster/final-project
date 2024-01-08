@@ -1,5 +1,5 @@
 ---
-heading: Fantastisk Forståelse
+heading: Fantastisk Forståelse super godt
 quote: >-
   Jeg havde problemer med min hyperaktive labrador, men takket være denne
   dyreadfærdsspecialists utrolige indsigt og tålmodighed, er han nu rolig og
