@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css"
 import {Contact} from "../../../tina/__generated__/types";
 import client from "../../../tina/__generated__/client";
 import React from "react";
-import MapContainer from "@/components/sections/contact/MapContainer";
+import MapWrapper from "@/components/sections/contact/MapWrapper";
 
 export default async function ContactSection() {
     const query = await client.queries.contact({ relativePath: 'CONTACT.md' })
@@ -15,9 +15,7 @@ export default async function ContactSection() {
                 <ContactForm contact={contact} />
             </div>
 
-            <div className={"-mx-4 lg:ml-0 z-0"}>
-                <MapContainer />
-            </div>
+            <MapWrapper />
         </section>
     )
 }
