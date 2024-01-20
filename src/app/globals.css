@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-primary {
-    background-color: #F2F4F3;
+    background-color: #E9F2F0;
 }
 
 @media (min-width: 1024px) {
