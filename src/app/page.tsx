@@ -6,7 +6,7 @@ import ApproachSection from "@/components/sections/ApproachSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TrainingSection from "@/components/sections/TrainingSection";
 import HeroSectionWrapper from "@/components/sections/wrappers/HeroSectionWrapper";
-import BlogSectionWrapper from "@/components/sections/wrappers/BlogSectionWrapper";
+// import BlogSectionWrapper from "@/components/sections/wrappers/BlogSectionWrapper";
 import TestimonialsSectionWrapper from "@/components/sections/wrappers/TestimonialsSectionWrapper";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
                 <QualificationsSection/>
                 <ApproachSection/>
                 <TestimonialsSectionWrapper/>
-                <BlogSectionWrapper/>
+                {/*<BlogSectionWrapper/>*/}
                 <ContactSection/>
             </main>
 
