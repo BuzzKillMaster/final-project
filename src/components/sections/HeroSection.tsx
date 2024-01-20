@@ -1,10 +1,8 @@
 'use client'
 
 import SectionHeader from "@/components/sections/partials/SectionHeader";
-import PrimaryButton from "@/components/PrimaryButton";
 import HeroVideo from "@/components/sections/hero/HeroVideo";
 import {Hero} from "../../../tina/__generated__/types";
-import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function HeroSection({hero}: { hero: Hero }) {
     return (
@@ -17,10 +15,6 @@ export default function HeroSection({hero}: { hero: Hero }) {
                     description={hero.description}
                     headingClassname={"text-[#955E42]"}
                 />
-
-                <ScrollAnimation>
-                    <PrimaryButton type={"button"} text={hero.button} onClick={() => {}}/>
-                </ScrollAnimation>
             </div>
 
             <div className={"lg:-mr-4 col-start-1 row-start-1 lg:col-start-2 hero_video_container"}>
