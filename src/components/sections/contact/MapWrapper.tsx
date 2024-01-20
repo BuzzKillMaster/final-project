@@ -30,7 +30,7 @@ export default function MapWrapper() {
     const [activeTab, setActiveTab] = useState<Tab>(Tab.PHOTO)
 
     return (
-        <div className={"-mx-4 lg:ml-0 z-0 relative"}>
+        <div className={"hidden lg:block -mx-4 lg:ml-0 z-0 relative"}>
             <div className={"grid grid-cols-2 text-center absolute top-12 left-1/2 -translate-x-1/2 z-40 shadow"}>
                 <div className={(activeTab === Tab.PHOTO ? "bg-neutral-300" : "bg-neutral-200") + " py-3 px-5 rounded-l cursor-pointer hover:bg-neutral-300"} onClick={() => setActiveTab(Tab.PHOTO)}>
                     <p>Billede</p>
@@ -49,8 +49,8 @@ export default function MapWrapper() {
                         initial={"hidden"}
                         animate={"visible"}
                         exit={"hidden"}
-                        className={"absolute inset-0 flex items-center justify-center overflow-hidden z-10"}>
-                        <Image src={"/drone-photo.jpg"} alt={""} width={1500} height={1500} layout={"responsive"} className={"object-cover"}/>
+                        className={"absolute inset-0 overflow-hidden z-10"}>
+                        <Image src={"/drone-photo.jpg"} alt={""} width={1500} height={1500} layout={"responsive"} className={"h-full object-cover"}/>
                     </motion.div>
                 )}
 
