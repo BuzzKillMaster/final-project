@@ -9,7 +9,6 @@ import {Testimonials} from "@/../tina/__generated__/types";
 import {AnimatePresence} from "framer-motion";
 import {motion} from "framer-motion";
 import Image from "next/image";
-import {PiCaretLeftBold, PiCaretRightBold} from "react-icons/pi";
 import {BiSolidQuoteAltRight} from "react-icons/bi";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
@@ -125,15 +124,15 @@ export default function TestimonialsSection({testimonials}: { testimonials: Test
                 </AnimatePresence>
             </ScrollAnimation>
 
-            <ScrollAnimation className={"flex gap-12 justify-center md:hidden mt-12"}>
-                <div className={"bg-neutral-100 rounded shadow hover:bg-neutral-200 cursor-pointer"} onClick={() => changeTestimonial(true)}>
-                    <PiCaretLeftBold className={"h-6 w-6 m-4"} />
-                </div>
-
-                <div className={"bg-neutral-100 rounded shadow hover:bg-neutral-200 cursor-pointer"} onClick={() => changeTestimonial()}>
-                    <PiCaretRightBold className={"h-6 w-6 m-4"} />
-                </div>
-            </ScrollAnimation>
+            <div className={"mt-12 flex md:hidden gap-2 justify-center md:justify-start"}>
+                {testimonials.map((_, index) => (
+                    <div
+                        key={index}
+                        onClick={() => showTestimonial(index)}
+                        className={(index === testimonialIndex ? "w-12 bg-[#754B3E]" : "w-8 bg-[#DFCFB4] hover:brightness-75") + " testimonial-tab h-4 rounded shadow cursor-pointer"}
+                    ></div>
+                ))}
+            </div>
         </SectionContainer>
     )
 }
