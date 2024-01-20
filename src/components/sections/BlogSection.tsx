@@ -23,7 +23,7 @@ export default function BlogSection({blog}: { blog: Blog }) {
 
             <SectionContainer sectionId={"blog_section"} sectionClassName={"relative overflow-hidden"}>
                 <SectionHeader subheading={blog.subheading} heading={blog.heading} description={blog.description} />
-                <Image src={"/background_assets/paws_02.svg"} alt={"Paws"} fill={true} className={"opacity-30 -scale-x-100"} />
+                <Image src={"/background_assets/paws_02.svg"} alt={"Paws"} fill={true} className={"opacity-40 -scale-x-100"} />
 
                 <ScrollAnimation className={"z-10 relative"}>
                     <PrimaryButton type={"button"} text={blog.button} onClick={() => setShowPopover(!showPopover)} secondary={true}/>

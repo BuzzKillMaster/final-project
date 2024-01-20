@@ -18,7 +18,7 @@ export default async function ApproachSection() {
     return (
         <SectionContainer sectionId={"approach_section"} sectionClassName={"relative overflow-hidden"}>
             <SectionHeader subheading={approach.subheading} heading={approach.heading} description={approach.description} />
-            <Image src={"/background_assets/paws_02.svg"} alt={"Paws"} fill={true} className={"opacity-30 -rotate-45 -scale-x-100"} />
+            <Image src={"/background_assets/paws_02.svg"} alt={"Paws"} fill={true} className={"opacity-40 -rotate-45 -scale-x-100"} />
 
             <div className={"grid md:grid-cols-3 gap-12 mt-20 relative z-10"}>
                 {

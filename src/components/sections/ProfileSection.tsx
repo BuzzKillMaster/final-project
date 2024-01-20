@@ -12,7 +12,7 @@ export default async function ProfileSection() {
 
     return (
         <SectionContainer sectionId={"profile_section"} sectionClassName={"relative overflow-hidden"} containerClassName={"grid grid-cols-1 md:grid-cols-2 gap-20 items-center"}>
-            <Image src={"/background_assets/paws_01.svg"} alt={"Paws"} fill={true} className={"opacity-30"} />
+            <Image src={"/background_assets/paws_01.svg"} alt={"Paws"} fill={true} className={"opacity-40"} />
 
             <ProfileImage
                 imageSrc={profile.profile_image}
