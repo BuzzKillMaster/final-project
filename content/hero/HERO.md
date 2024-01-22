@@ -1,5 +1,5 @@
 ---
-subheading: Adfærdstræning ved. Dawn Williason
+subheading: Adfærdstræning ved. Dawn Williamson
 heading: Skab et harmonisk forhold med din hund
 description: >
   Hver hund er unik, og vores adfærdstræning er skræddersyet til at hjælpe dig
