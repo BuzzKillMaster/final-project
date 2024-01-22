@@ -56,7 +56,7 @@ export default function AppHeader() {
     }
 
     return (
-        <header ref={header} className={"fixed top-0 right-0 left-0 z-50 p-6 bg-primary shadow"}>
+        <header ref={header} className={"sticky top-0 right-0 left-0 z-50 p-6 bg-primary shadow"}>
             <div className={"container mx-auto max-w-7xl flex items-center justify-between"}>
                 <AppLogo/>
 
