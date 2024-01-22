@@ -50,7 +50,7 @@ export default function MapWrapper() {
                         animate={"visible"}
                         exit={"hidden"}
                         className={"absolute inset-0 overflow-hidden z-10"}>
-                        <Image src={"/drone-photo.jpg"} alt={""} width={1500} height={1500} layout={"responsive"} className={"h-full object-cover"}/>
+                        <Image src={"/drone-photo.jpg"} alt={""} layout={"fill"} className={"object-cover"}/>
                     </motion.div>
                 )}
 
