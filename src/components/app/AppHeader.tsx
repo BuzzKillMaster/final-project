@@ -28,10 +28,10 @@ const destinations = [
         name: "Udtalelser",
         target: "testimonials_section"
     },
-    {
-        name: "Blog",
-        target: "blog_section"
-    },
+    // {
+    //     name: "Blog",
+    //     target: "blog_section"
+    // },
     {
         name: "Kontakt",
         target: "contact_section"
